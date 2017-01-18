@@ -20,15 +20,24 @@ module.exports = function(grunt) { // the general grunt function that is run
         }
       }
     },
-
+    jshint: {
+      all: ['Gruntfile.js', 'js/**/*.js']
+    },
     watch: { // watch task for general work
       sass: {
-        files: ['sass/**/*.scss'],
+        files: ['sass/**/*.scss','js/**/*.js'],
         tasks: ['sass']
       },
       styles: {
         files: ['stylesheets/app.css'],
         tasks: ['cssmin']
+      }
+    },
+    uglify: {
+      my_target: {
+        files: {
+          'dist/output.min.js': 'js/index.js'
+        }
       }
     }
   });
@@ -37,7 +46,9 @@ module.exports = function(grunt) { // the general grunt function that is run
   grunt.loadNpmTasks('grunt-contrib-sass');
   grunt.loadNpmTasks('grunt-contrib-cssmin');
   grunt.loadNpmTasks('grunt-contrib-watch');
+  grunt.loadNpmTasks('grunt-contrib-jshint');
+  grunt.loadNpmTasks('grunt-contrib-uglify');
 
   // registering the default task that we're going to use along with watch
-  grunt.registerTask('default', ['sass', 'cssmin']);
+  grunt.registerTask('default', ['sass', 'cssmin','jshint']);
 };
