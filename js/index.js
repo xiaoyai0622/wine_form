@@ -7,12 +7,14 @@ $(document).ready(function () {
      *
      */
 
-
     if(readCookie('form_saved')==='true'){
+
         if (readCookie('submitted')==='true'){
+
             displayDataFromCookie(readCookie('form_data'));
         }else{
 
+            retriveDataFromCookie(readCookie('form_data'))
         }
 
     }
@@ -207,18 +209,19 @@ $(document).ready(function () {
     function retriveDataFromCookie(data_string){
         var form_data = data_string.split(',');
         console.log(form_data);
-        document.getElementById('email-address').value = form_data[0];
-        document.getElementById('email-address-confirm').value;
-        document.getElementById('first-name').value;
-        document.getElementById('last-name').value;
-        document.getElementById('address-1').value;
-        document.getElementById('address-2').value;
-        document.getElementById('city').value;
-        document.getElementById('state-select').value;
-        document.getElementById('zip').value;
-        document.getElementById('phone').value;
-        document.getElementById('residential').checked;
-        document.getElementById('company').value;
+        console.log(form_data);
+        document.getElementById('email-address').value = readCookie('email-address');
+        document.getElementById('email-address-confirm').value= readCookie('email-address-confirm');
+        document.getElementById('first-name').value = readCookie('first-name');
+        document.getElementById('last-name').value = readCookie('last-name');
+        document.getElementById('address-1').value = readCookie('address-1');
+        document.getElementById('address-2').value = readCookie('address-2');
+        document.getElementById('city').value  = readCookie('city');
+        document.getElementById('state-select').value = readCookie('state-select');
+        document.getElementById('zip').value = readCookie('zip');
+        document.getElementById('phone').value = readCookie('phone');
+        document.getElementById('residential').checked = readCookie('residential');
+        document.getElementById('company').value = readCookie('company');
     }
 
     function createCookie(name,value,days) {
