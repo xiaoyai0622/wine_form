@@ -1,0 +1,30 @@
+@import "base";
+@import "layout";
+
+
+ul{
+  list-style-type: none;
+}
+
+.text-center{
+  text-align: center;
+}
+
+.form-control {
+  max-width: 400px !important;
+}
+
+#shipping-company{
+  display:none;
+}
+
+.warning{
+  display:none;
+
+}
+.alert{
+  margin-top: 10px;
+  max-width: 400px;
+  display: none;
+}
+

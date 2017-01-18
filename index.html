@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html id="html">
+<head>
+    <meta charset="utf-8">
+    <title>Landing Page - Front-End Developer Test</title>
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="stylesheets/app.min.css">
+</head>
+<body>
+<div class="container-fluid">
+    <!-- h1>Landing Page Form - Front-End Developer Test</h1 -->
+
+    <form name="product-form" action="" method="post" id="wine-form">
+
+        <div id="shipping-address-container">
+            <div class="section-header text-center">
+                <h2>Shipping Information</h2>
+            </div>
+            <ul class="checkout" id="shipping-address">
+                <div class="row form-group">
+                    <li id="shipping-email">
+                        <div class="col-md-6">
+                            <label>Email Address</label>
+                        </div>
+                        <div class="col-md-6" id="part-email">
+                            <input type="text" id="email-address" class="form-control" placeholder="Email Address" required>
+                            <div class="alert alert-danger" role="alert" id="alert-email-validate">
+                                <strong>Oh sorry!</strong> email address format is not correct
+                            </div>
+                        </div>
+                    </li>
+                </div>
+
+                <div class="row form-group">
+                    <li id="shipping-email-confirm">
+                        <div class="col-md-6">
+                            <label>Confrim Email Address</label>
+                        </div>
+                        <div class="col-md-6" id="part-email-confirm">
+                            <input type="text" id="email-address-confirm" class="form-control" placeholder="Confrim Email Address" required>
+                            <div class="alert alert-danger" role="alert" id="alert-email">
+                                <strong>Oh sorry!</strong> email address does not match
+                            </div>
+                        </div>
+                    </li>
+                </div>
+
+                <div class="row form-group">
+                    <li id="shipping-fname">
+                        <div class="col-md-6">
+                            <label> First Name </label>
+                        </div>
+                        <div class="col-md-6" id="part-first-name">
+                            <input id="first-name" maxlength="15" value="" type="text" class="form-control" placeholder="First Name" required>
+                        </div>
+                    </li>
+                </div>
+
+
+                <div class="row form-group">
+                <li id="shipping-lname">
+                    <div class="col-md-6">
+                        <label> Last Name </label>
+                    </div>
+                    <div class="col-md-6" id="part-last-name">
+                        <input id="last-name" maxlength="19" value="" type="text" class="form-control" placeholder="Last Name" required>
+                    </div>
+                </li>
+            </div>
+
+
+                <div class="row form-group">
+                    <li id="shipping-addr1">
+                        <div class="col-md-6">
+                            <label> Address 1 </label>
+                        </div>
+                        <div class="col-md-6" id="part-address-1">
+                            <input id="address-1" maxlength="35" value="" type="text" class="form-control" placeholder="Address 1" required>
+                        </div>
+                    </li>
+                </div>
+                <div class="row form-group">
+                    <li id="shipping-addr2">
+                        <div class="col-md-6">
+                            <label> Address 2 </label>
+                        </div>
+                        <div class="col-md-6" id="part-address-2">
+                            <input id="address-2" maxlength="35" value="" type="text" class="form-control" placeholder="Address 2">
+                        </div>
+                    </li>
+                </div>
+
+
+                <div class="row form-group">
+                    <li id="shipping-city">
+                        <div class="col-md-6">
+                            <label> City </label>
+                        </div>
+                        <div class="col-md-6" id="part-city">
+                            <input id="city" value="" type="text" class="form-control" placeholder="City" required>
+                        </div>
+                    </li>
+                </div>
+
+
+
+                <div class="row form-group">
+                    <li id="shipping-state">
+                        <div class="col-md-6">
+                            <label> State </label>
+                        </div>
+                        <div class="col-md-6" id="part-state">
+                            <select name="state" class="form-control" id="state-select" required>
+                                <option value="AL">AL</option>
+                                <option value="AK">AK</option>
+                                <option value="AZ">AZ</option>
+                                <option value="AR">AR</option>
+                                <option value="CA">CA</option>
+                                <option value="CO">CO</option>
+                                <option value="CT">CT</option>
+                                <option value="DE">DE</option>
+                                <option value="DC">DC</option>
+                                <option value="FL">FL</option>
+                                <option value="GA">GA</option>
+                                <option value="HI">HI</option>
+                                <option value="ID">ID</option>
+                                <option value="IL">IL</option>
+                                <option value="IN">IN</option>
+                                <option value="IA">IA</option>
+                                <option value="KS">KS</option>
+                                <option value="KY">KY</option>
+                                <option value="LA">LA</option>
+                                <option value="ME">ME</option>
+                                <option value="MA">MA</option>
+                                <option value="MI">MI</option>
+                                <option value="MN">MN</option>
+                                <option value="MS">MS</option>
+                                <option value="MO">MO</option>
+                                <option value="MT">MT</option>
+                                <option value="NE">NE</option>
+                                <option value="NV">NV</option>
+                                <option value="NH">NH</option>
+                                <option value="NJ">NJ</option>
+                                <option value="NM">NM</option>
+                                <option value="NY">NY</option>
+                                <option value="NC">NC</option>
+                                <option value="ND">ND</option>
+                                <option value="OH">OH</option>
+                                <option value="OK">OK</option>
+                                <option value="OR">OR</option>
+                                <option value="RI">RI</option>
+                                <option value="SC">SC</option>
+                                <option value="SD">SD</option>
+                                <option value="TN">TN</option>
+                                <option value="TX">TX</option>
+                                <option value="UT">UT</option>
+                                <option value="VT">VT</option>
+                                <option value="VA">VA</option>
+                                <option value="WA">WA</option>
+                                <option value="WV">WV</option>
+                                <option value="WI">WI</option>
+                                <option value="WY">WY</option>
+                            </select>
+
+                            <div class="alert alert-warning" role="alert" id="alert-state-disable" >
+                                <strong>Oh sorry!</strong> we are unable to ship wine to those states.
+                            </div>
+                        </div>
+                    </li>
+                </div>
+
+
+                <div class="row form-group">
+                    <li id="shipping-zip">
+                        <div class="col-md-6">
+                            <label>Zip</label>
+                        </div>
+                        <div class="col-md-6" id="part-zip">
+                            <input id="zip" maxlength="5" value="" type="text" class="form-control" placeholder="Zip">
+                            <div class="alert alert-danger" role="alert" id="alert-zip">
+                                <strong>Oh sorry!</strong> Only numbers are allowed in this field.
+                            </div>
+                        </div>
+                    </li>
+                </div>
+
+                <div class="row form-group">
+                    <li id="shipping-phone">
+                        <div class="col-md-6">
+                            <label>Phone </label >
+
+
+                        </div>
+                        <div class="col-md-6" id="part-phone">
+                            <input id="phone" maxlength="10" value="" type="text" class="form-control" placeholder="Phone" required>
+                            <div class="alert alert-danger" role="alert" id="alert-phone">
+                                <strong>Oh sorry!</strong> Please enter a valid US phone number
+                            </div>
+                        </div>
+                    </li>
+                </div>
+
+                <div class="row form-group">
+                    <li id="shipping-toggle">
+                    <div class="col-md-6">
+                        <p>Is this address? </p>
+
+                    </div>
+
+                    <div class="col-md-6" id="part-shipping">
+                        <input id="residential" value="Residential" type="radio" checked="" name="optionsRadios">
+                        <span> Residential </span>
+                        <input id="commercial" value="Commercial" type="radio" name="optionsRadios">
+                        <span> Commercial </span>
+                    </div>
+                    </li>
+                </div>
+
+                <div class="row form-group">
+                    <li id="shipping-company">
+                        <div class="col-md-6">
+                            <label> Company Name </label>
+
+                        </div>
+                        <div class="col-md-6" id="part-company">
+                            <input id="company" value="" type="text" class="form-control" placeholder="Company Name">
+
+                        </div>
+                    </li>
+                </div>
+
+
+            </ul>
+        </div>
+
+        <div class="col-md-12 text-center">
+            <input type="submit" value="Submit Form" class="btn btn-primary" id="wine-form-submit" />
+        </div>
+
+
+    </form>
+</div>
+
+
+</body>
+
+
+<script
+        src="https://code.jquery.com/jquery-3.1.1.min.js"
+        integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+        crossorigin="anonymous"></script>
+<script
+        src="js/index.js"></script>
+</html>
