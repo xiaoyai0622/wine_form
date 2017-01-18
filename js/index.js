@@ -161,9 +161,8 @@ $(document).ready(function () {
 
     $("#wine-form").submit(function (event) {
         if (validate()) {
-            alert("Handler for .submit() called.");
             saveFormInCookie();
-
+            location.reload();
         }
 
         event.preventDefault();
